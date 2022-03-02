@@ -21,6 +21,6 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url = '/meetups')), #if the domain doesn't have any slash we redirect to this path
+    path('albumsdjangoproj.herokuapp.com/', RedirectView.as_view(url = '/meetups')), #if the domain doesn't have any slash we redirect to this path
     path('meetups/', include('meetups.urls')) #helps to include other urls from other apps - in this case, meetups
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
